@@ -90,6 +90,12 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NMNIR.resx">
+      <DependentUpon>NMNIR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OMR.resx">
+      <DependentUpon>OMR.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -99,6 +105,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VR.resx">
+      <DependentUpon>VR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YMR.resx">
+      <DependentUpon>YMR.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

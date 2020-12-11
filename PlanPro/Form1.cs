@@ -16,5 +16,23 @@ namespace PlanPro
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            string FIO_prep = textBox1.Text; // ФИО препода с формы регистрации
+            string PCK = comboBox1.Text; // ФИО ПЦК с формы регистрации
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "" && comboBox1.Text == "")
+            {
+                MessageBox.Show(" Заполните поля ");
+
+            }
+
+        }
     }
 }

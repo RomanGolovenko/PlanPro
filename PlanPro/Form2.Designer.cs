@@ -75,9 +75,9 @@ namespace PlanPro
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(323, 301);
+            this.button5.Location = new System.Drawing.Point(674, 351);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.Size = new System.Drawing.Size(113, 53);
             this.button5.TabIndex = 4;
             this.button5.Text = "Сохранить";
             this.button5.UseVisualStyleBackColor = true;
