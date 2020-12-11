@@ -16,10 +16,36 @@ namespace PlanPro
         {
             InitializeComponent();
         }
-
+        // кнопка УМР
         private void button1_Click(object sender, EventArgs e)
         {
+            YMR y = new YMR(); // переменная для перехода на форму 
+            y.Show(); // открытие  формы 
+        }
 
+        // кнопка НМНИР
+        private void button2_Click(object sender, EventArgs e)
+        {
+            NMNIR n = new NMNIR(); // переменная для перехода на форму 
+            n.Show(); // открытие  формы 
+        }
+        // кнопка ОМР
+        private void button3_Click(object sender, EventArgs e)
+        {
+            OMR o = new OMR(); // переменная для перехода на форму 
+            o.Show(); // открытие  формы 
+        }
+        // кнопка ВР
+        private void button4_Click(object sender, EventArgs e)
+        {
+            VR v = new VR(); // переменная для перехода на форму 
+            v.Show(); // открытие  формы 
+        }
+        // кнопка сохранить 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //Закрытие формы
+            Close();
         }
     }
 }

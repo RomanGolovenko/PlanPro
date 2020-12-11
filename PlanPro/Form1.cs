@@ -25,14 +25,19 @@ namespace PlanPro
 
         }
 
+        // Кнопка далее 
         private void button1_Click(object sender, EventArgs e)
         {
+            Form2 f = new Form2(); // переменная для перехода на форму 
+            // Проверка заполнености полей
             if (textBox1.Text == "" && comboBox1.Text == "")
             {
                 MessageBox.Show(" Заполните поля ");
 
             }
-
+            else
+               
+                 f.Show(); // открытие второй формы 
         }
     }
 }

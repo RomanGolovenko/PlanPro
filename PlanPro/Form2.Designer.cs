@@ -54,6 +54,7 @@ namespace PlanPro
             this.button2.TabIndex = 1;
             this.button2.Text = "Научно-методичская и\r\nнаучно-иследовательская\r\n работа";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -63,6 +64,7 @@ namespace PlanPro
             this.button3.TabIndex = 2;
             this.button3.Text = "Организационно-методическая \r\nработа";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -72,6 +74,7 @@ namespace PlanPro
             this.button4.TabIndex = 3;
             this.button4.Text = "Воспитательная работа";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -81,6 +84,7 @@ namespace PlanPro
             this.button5.TabIndex = 4;
             this.button5.Text = "Сохранить";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Form2
             // 
