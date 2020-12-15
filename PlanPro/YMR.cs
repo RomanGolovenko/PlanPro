@@ -49,15 +49,24 @@ namespace PlanPro
             //Видимость полей в гриде
             dataGridView1.Columns[0].Visible = true;
             dataGridView1.Columns[1].Visible = true;
+            //dataGridView1.Columns[2].Visible = true;
+            //dataGridView1.Columns[3].Visible = true;
+            //dataGridView1.Columns[4].Visible = true;
 
             //Ширина полей
             dataGridView1.Columns[0].FillWeight = 10;
             dataGridView1.Columns[1].FillWeight = 50;
+            //dataGridView1.Columns[2].FillWeight = 50;
+            //dataGridView1.Columns[3].FillWeight = 50;
+            //dataGridView1.Columns[4].FillWeight = 50;
 
 
             //Растягивание полей грида
             dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            //dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            //dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            //dataGridView1.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
             //Убираем заголовки строк
             dataGridView1.RowHeadersVisible = false;
