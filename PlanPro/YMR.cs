@@ -17,7 +17,7 @@ namespace PlanPro
 
         // Глобальные переменные
         // Точка в хода в бд
-        string connStr = "server = osp74.ru; user = st_2_1;database = st_2_1;password = 33674763; port =33333";// Строка входа в бд
+        string connStr = "server = osp74.ru; user = st_2_5;database = st_2_5;password = 29259054; port =33333";// Строка входа в бд
         MySqlConnection conn_db;
         private MySqlDataAdapter MyDA = new MySqlDataAdapter();
         //Объявление BindingSource, основная его задача, это обеспечить унифицированный доступ к источнику данных.
@@ -33,7 +33,7 @@ namespace PlanPro
         {
             InitializeComponent();
         }
-
+        //кнопка сохранить
         private void button1_Click(object sender, EventArgs e)
         {
             //Закрытие формы
@@ -49,24 +49,24 @@ namespace PlanPro
             //Видимость полей в гриде
             dataGridView1.Columns[0].Visible = true;
             dataGridView1.Columns[1].Visible = true;
-            //dataGridView1.Columns[2].Visible = true;
-            //dataGridView1.Columns[3].Visible = true;
-            //dataGridView1.Columns[4].Visible = true;
+            dataGridView1.Columns[2].Visible = true;
+            dataGridView1.Columns[3].Visible = true;
+            dataGridView1.Columns[4].Visible = true;
 
             //Ширина полей
-            dataGridView1.Columns[0].FillWeight = 10;
+            dataGridView1.Columns[0].FillWeight = 90;
             dataGridView1.Columns[1].FillWeight = 50;
-            //dataGridView1.Columns[2].FillWeight = 50;
-            //dataGridView1.Columns[3].FillWeight = 50;
-            //dataGridView1.Columns[4].FillWeight = 50;
+            dataGridView1.Columns[2].FillWeight = 50;
+            dataGridView1.Columns[3].FillWeight = 20;
+            dataGridView1.Columns[4].FillWeight = 20;
 
 
             //Растягивание полей грида
             dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            //dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            //dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            //dataGridView1.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
             //Убираем заголовки строк
             dataGridView1.RowHeadersVisible = false;
@@ -77,7 +77,7 @@ namespace PlanPro
         public void GetListUsers()
         {
             //Запрос для вывода строк в БД
-            string commandStr = "SELECT id_categ AS 'ID', title_categ AS 'title_categ' FROM t_categ";
+            string commandStr = "SELECT TypeWork AS 'Вид работы', ReportForm AS 'Форма отчетности', Deadline AS 'Срок выполнения ', Hours AS 'Обьем часов', Mark AS 'Отметка о выполнении' FROM tabYMR";
             //Открываем соединение
             conn_db.Open();
             //Объявляем команду, которая выполнить запрос в соединении conn

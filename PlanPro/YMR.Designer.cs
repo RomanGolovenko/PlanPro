@@ -36,7 +36,7 @@ namespace PlanPro
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(656, 376);
+            this.button1.Location = new System.Drawing.Point(762, 376);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(123, 48);
             this.button1.TabIndex = 1;
@@ -49,14 +49,14 @@ namespace PlanPro
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(767, 358);
+            this.dataGridView1.Size = new System.Drawing.Size(873, 358);
             this.dataGridView1.TabIndex = 2;
             // 
             // YMR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(957, 450);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Name = "YMR";
