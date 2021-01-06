@@ -62,7 +62,7 @@ namespace PlanPro
                 case 1:
 
                     worddocument.Content.ParagraphFormat.Alignment =
- Word.WdParagraphAlignment.wdAlignParagraphCenter;
+                    Word.WdParagraphAlignment.wdAlignParagraphCenter;
                     worddocument.Content.ParagraphFormat.LeftIndent =
                      worddocument.Content.Application.CentimetersToPoints((float)2);
                     worddocument.Content.ParagraphFormat.RightIndent =
