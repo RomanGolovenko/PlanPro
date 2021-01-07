@@ -33,19 +33,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\Desktop\Учеба\библиотеки\Ссылки Office\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Office.Interop.Word, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
       <HintPath>..\..\..\..\..\Downloads\библиотеки\Ссылки Office\Microsoft.Office.Interop.Word.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data">
-      <HintPath>..\..\..\..\..\Downloads\библиотеки\Коннектор MySQL для C#\v4.5.2\MySql.Data.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\Учеба\библиотеки\Коннектор MySQL для C#\v4.5.2\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data.EntityFramework">
-      <HintPath>..\..\..\..\..\Downloads\библиотеки\Коннектор MySQL для C#\v4.5.2\MySql.Data.EntityFramework.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\Учеба\библиотеки\Коннектор MySQL для C#\v4.5.2\MySql.Data.EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Web">
-      <HintPath>..\..\..\..\..\Downloads\библиотеки\Коннектор MySQL для C#\v4.5.2\MySql.Web.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\Учеба\библиотеки\Коннектор MySQL для C#\v4.5.2\MySql.Web.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

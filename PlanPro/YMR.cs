@@ -28,17 +28,15 @@ namespace PlanPro
         private DataSet ds = new DataSet();
         //Представляет одну таблицу данных в памяти.
         private DataTable table = new DataTable();
+        //Запрос для вывода строк в БД
+        string commandStr = "SELECT TypeWork AS 'Вид работы', ReportForm AS 'Форма отчетности', Deadline AS 'Срок выполнения ', Hours AS 'Обьем часов', Mark AS 'Отметка о выполнении' FROM tabYMR";
+
 
         public YMR()
         {
             InitializeComponent();
         }
-        //кнопка сохранить
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //Закрытие формы
-            Close();
-        }
+       
 
         private void YMR_Load(object sender, EventArgs e)
         {
@@ -76,12 +74,15 @@ namespace PlanPro
         //Метод наполнения DataGreed
         public void GetListUsers()
         {
-            //Запрос для вывода строк в БД
-            string commandStr = "SELECT TypeWork AS 'Вид работы', ReportForm AS 'Форма отчетности', Deadline AS 'Срок выполнения ', Hours AS 'Обьем часов', Mark AS 'Отметка о выполнении' FROM tabYMR";
+            
             //Открываем соединение
             conn_db.Open();
+          
             //Объявляем команду, которая выполнить запрос в соединении conn
             MyDA.SelectCommand = new MySqlCommand(commandStr, conn_db);
+
+            
+
             //Заполняем таблицу записями из БД
             MyDA.Fill(table);
             //Указываем, что источником данных в bindingsource является заполненная выше таблица
@@ -90,7 +91,25 @@ namespace PlanPro
             dataGridView1.DataSource = bSource;
             //Закрываем соединение
             conn_db.Close();
+            dataGridView1.ReadOnly = false;
+            button1.Enabled =true;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
+           
+           
+          
+           
+        }
+        //кнопка сохранить
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MyDA.UpdateCommand = new MySqlCommand(commandStr, conn_db);
+            MyDA.Update(table);
+            dataGridView1.ReadOnly = true;
+            button1.Enabled = true;
+            
+            ////Закрытие формы
+            //Close();
         }
     }
 }
