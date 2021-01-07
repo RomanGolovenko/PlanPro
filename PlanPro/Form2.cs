@@ -51,7 +51,7 @@ namespace PlanPro
         private void button5_Click(object sender, EventArgs e)
         {
             //Закрытие формы
-            Close();
+            Application.Exit();
         }
         //кнопка открытия WORD 
         private void button6_Click(object sender, EventArgs e)

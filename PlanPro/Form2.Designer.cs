@@ -29,6 +29,7 @@ namespace PlanPro
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -79,7 +80,7 @@ namespace PlanPro
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(500, 348);
+            this.button5.Location = new System.Drawing.Point(536, 288);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(113, 53);
             this.button5.TabIndex = 4;
@@ -89,7 +90,7 @@ namespace PlanPro
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(674, 348);
+            this.button6.Location = new System.Drawing.Point(685, 288);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(113, 53);
             this.button6.TabIndex = 5;
@@ -102,6 +103,7 @@ namespace PlanPro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::PlanPro.Properties.Resources.фон21;
             this.ClientSize = new System.Drawing.Size(841, 450);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -109,6 +111,7 @@ namespace PlanPro
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);

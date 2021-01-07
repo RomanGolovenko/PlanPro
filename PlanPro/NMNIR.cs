@@ -28,7 +28,7 @@ namespace PlanPro
         //Представляет одну таблицу данных в памяти.
         private DataTable table = new DataTable();
         //Запрос для вывода строк в БД
-        string commandStr = "SELECT TypeWork AS 'Вид работы', ReportForm AS 'Форма отчетности', Deadline AS 'Срок выполнения ', Hours AS 'Обьем часов', Mark AS 'Отметка о выполнении' FROM tabOMR";
+        string commandStr = "SELECT TypeWork AS 'Вид работы', ReportForm AS 'Форма отчетности', Deadline AS 'Срок выполнения ', Hours AS 'Обьем часов', Mark AS 'Отметка о выполнении' FROM tabNMNR";
 
         public NMNIR()
         {

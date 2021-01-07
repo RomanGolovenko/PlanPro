@@ -36,14 +36,14 @@ namespace PlanPro
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //Закрытие формы
-            Close();
-        }
+       
 
-        private void VR_Load(object sender, EventArgs e)
+        
+
+
+        private void VR_Load_1(object sender, EventArgs e)
         {
+
             //Инициализируем соединение с БД
             conn_db = new MySqlConnection(connStr);
             //Вызываем метод для заполнение дата Грида
@@ -76,6 +76,7 @@ namespace PlanPro
             dataGridView1.ColumnHeadersVisible = true;
         }
 
+
         //Метод наполнения DataGreed
         public void GetListUsers()
         {
@@ -104,6 +105,12 @@ namespace PlanPro
 
 
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            //Закрытие формы
+            Close();
         }
     }
 }
