@@ -61,6 +61,7 @@ namespace PlanPro
             this.Controls.Add(this.dataGridView1);
             this.Name = "OMR";
             this.Text = "OMR";
+            this.Load += new System.EventHandler(this.OMR_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

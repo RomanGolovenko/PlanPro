@@ -50,7 +50,7 @@ namespace PlanPro
             this.button1.TabIndex = 1;
             this.button1.Text = "Сохранить";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+          
             // 
             // VR
             // 
@@ -61,6 +61,7 @@ namespace PlanPro
             this.Controls.Add(this.dataGridView1);
             this.Name = "VR";
             this.Text = "VR";
+           
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
