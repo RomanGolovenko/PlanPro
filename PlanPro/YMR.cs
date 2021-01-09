@@ -100,8 +100,10 @@ namespace PlanPro
           
            
         }
-        //кнопка сохранить
-        private void button1_Click(object sender, EventArgs e)
+        
+
+            //кнопка сохранить
+            private void button1_Click(object sender, EventArgs e)
         {
             MyDA.UpdateCommand = new MySqlCommand(commandStr, conn_db);
             MyDA.Update(table);
@@ -110,6 +112,12 @@ namespace PlanPro
             
             ////Закрытие формы
             //Close();
+        }
+        // метод обработки исключений грида, когда пользователь вводит не целочисленые
+        // значения в столбец "количество часов"
+        private void dataGridView1_DataError_1(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            MessageBox.Show(" Неверный формат введенных данных  ");
         }
     }
 }

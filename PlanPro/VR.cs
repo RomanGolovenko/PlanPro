@@ -112,5 +112,11 @@ namespace PlanPro
             //Закрытие формы
             Close();
         }
+        // метод обработки исключений грида, когда пользователь вводит не целочисленые
+        // значения в столбец "количество часов"
+        private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            MessageBox.Show(" Неверный формат введенных данных  ");
+        }
     }
 }

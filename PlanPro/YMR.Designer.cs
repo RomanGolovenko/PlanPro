@@ -55,6 +55,7 @@ namespace PlanPro
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(886, 293);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError_1);
             // 
             // YMR
             // 
