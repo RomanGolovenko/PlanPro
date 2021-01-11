@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Word = Microsoft.Office.Interop.Word;
+using Xceed.Words.NET;
 
 namespace PlanPro
 {
@@ -20,7 +21,7 @@ namespace PlanPro
         private Word.Application wordapp;
         private Word.Documents worddocuments;
         private Word.Document worddocument;
-       // private Word.Paragraphs wordparagraphs;
+        // private Word.Paragraphs wordparagraphs;
         private Word.Paragraph wordparagraph;
         // кнопка УМР
         private void button1_Click(object sender, EventArgs e)
@@ -56,73 +57,47 @@ namespace PlanPro
         //кнопка открытия WORD 
         private void button6_Click(object sender, EventArgs e)
         {
-            int i = Convert.ToInt32(((Button)(sender)).Tag);
-            switch (i)
-            {
-                case 1:
 
-                    worddocument.Content.ParagraphFormat.Alignment =
-                    Word.WdParagraphAlignment.wdAlignParagraphCenter;
-                    worddocument.Content.ParagraphFormat.LeftIndent =
-                     worddocument.Content.Application.CentimetersToPoints((float)2);
-                    worddocument.Content.ParagraphFormat.RightIndent =
-                     worddocument.Content.Application.CentimetersToPoints((float)1);
-
-                    //Вставляем в документ 4 параграфа
-                    object oMissing = System.Reflection.Missing.Value;
-                    worddocument.Paragraphs.Add(ref oMissing);
-                    worddocument.Paragraphs.Add(ref oMissing);
-                    worddocument.Paragraphs.Add(ref oMissing);
-                    worddocument.Paragraphs.Add(ref oMissing);
-                    //Переходим к первому добавленному параграфу
-                    wordparagraph = worddocument.Paragraphs[2];
-                    Word.Range wordrange = wordparagraph.Range;
-                    //Добавляем таблицу в начало второго параграфа
-                    Object defaultTableBehavior =
-                     Word.WdDefaultTableBehavior.wdWord9TableBehavior;
-                    Object autoFitBehavior =
-                     Word.WdAutoFitBehavior.wdAutoFitWindow;
-                    Word.Table wordtable1 = worddocument.Tables.Add(wordrange, 5, 5,
-                      ref defaultTableBehavior, ref autoFitBehavior);
-                    //Сдвигаемся вниз в конец документа
-                    object unit;
-                    object extend;
-                    unit = Word.WdUnits.wdStory;
-                    extend = Word.WdMovementType.wdMove;
-                    wordapp.Selection.EndKey(ref unit, ref extend);
-                    //Вставляем таблицу по месту курсора
-                    Word.Table wordtable2 = worddocument.Tables.Add(
-                      wordapp.Selection.Range, 4, 4, ref defaultTableBehavior,
-                    ref autoFitBehavior);
-                    //Меняем стили созданных таблиц
-                    Object style = "Классическая таблица 1";
-                    wordtable1.set_Style(ref style);
-                    style = "Сетка таблицы 3";
-                    Object applystyle = true;
-                    wordtable2.set_Style(ref style);
-                    wordtable2.ApplyStyleFirstColumn = true;
-                    wordtable2.ApplyStyleHeadingRows = true;
-                    wordtable2.ApplyStyleLastRow = false;
-                    wordtable2.ApplyStyleLastColumn = false;
-                    break;
-                case 2:
-                    Object saveChanges = Word.WdSaveOptions.wdPromptToSaveChanges;
-                    Object originalFormat = Word.WdOriginalFormat.wdWordDocument;
-                    Object routeDocument = Type.Missing;
-                    wordapp.Quit(ref saveChanges,
-                                 ref originalFormat, ref routeDocument);
-                    wordapp = null;
-                    break;
-               
-                default:
-                    Close();
-                    break;
-            }
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
 
         }
+
+
+        //Импорт отчёта в MS Word
+        private void экспертВMSWordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.RowCount != 0)
+            {
+                Double kk1 = GetKK(date_start, date_end, 1);
+                //MessageBox.Show(kk1.ToString());
+                Double kk2 = GetKK(date_start, date_end, 2);
+                //MessageBox.Show(kk2.ToString());
+                Double kk = (kk1 + kk2) / 2;
+                //Импорт отчёта
+                using (DocX document = DocX.Load(@"reports\templates\itogs_kkmp.docx"))
+                {
+                    try
+                    {
+                        document.Bookmarks["name_org"].SetText(SettingOrg.getParamOrg(1));
+                        document.Bookmarks["period"].SetText(period);
+                        document.Bookmarks["kk"].SetText(kk.ToString());
+                        document.Bookmarks["kk1"].SetText(kk1.ToString());
+                        document.Bookmarks["kk2"].SetText(kk2.ToString());
+
+                    }
+                    catch
+                    {
+
+                    }
+
+
+
+                }
+            }
+        }
     }
+
 }
