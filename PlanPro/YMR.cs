@@ -121,9 +121,57 @@ namespace PlanPro
             MessageBox.Show(" Неверный формат введенных данных  ");
         }
 
+        //private void button2_Click(object sender, EventArgs e)
+        //{
+        //    MenuItem_Click();
+        //}
+
         
-        
-       
+
+        //private void MenuItem_Click()
+        //{
+        //    string a = "переменая";
+        //    if (dataGridView1.RowCount != 0)
+        //    {
+        //        using (var document = DocX.Load(@"C:\Users\user\source\repos\PlanPro-master\kkmp.docx"))
+        //        {
+        //            //document.Bookmarks["a"].SetText(a);
+
+        //            var criterias = document.AddTable(dataGridView1.RowCount + 2, dataGridView1.ColumnCount - 1);
+        //            //Озаглавливание полей                    
+        //            criterias.Rows[1].Cells[0].Paragraphs[0].Append(dataGridView1.Columns[1].HeaderText);
+        //            criterias.Rows[1].Cells[1].Paragraphs[0].Append("Всего");
+        //            criterias.Rows[1].Cells[2].Paragraphs[0].Append("I");
+        //            criterias.Rows[1].Cells[3].Paragraphs[0].Append("II");
+        //            //Объединение ячеек в 0 строке
+        //            criterias.Rows[0].MergeCells(1, 3);
+        //           //criterias.Rows[0].MergeCells(2, 4);
+        //            //Наименование объединенных ячеек
+        //            criterias.Rows[0].Cells[1].Paragraphs[0].Append("Количество экспертиз");
+        //            //criterias.Rows[0].Cells[2].Paragraphs[0].Append("Количество дефектов");
+        //            //Цикл заполнения таблицы с критериями
+        //            for (int i = 2; i < dataGridView1.RowCount + 2; i++)
+        //            {
+        //                for (int j = 1; j < dataGridView1.ColumnCount; j++)
+        //                {
+        //                    string value = dataGridView1[j, i - 2].Value.ToString();
+        //                    criterias.Rows[i].Cells[j - 1].Paragraphs[0].Append(value);
+
+        //                }
+                        
+        //            }
+                    
+        //            //Настройка внешнего вида таблицы                    
+        //            criterias.Design = TableDesign.TableGrid;
+        //            criterias.Alignment = Alignment.center;
+        //            //Вставка таблицы в документ
+        //            document.InsertTable(criterias);
+
+        //        }
+        //    }
+        //}
+
+      
     }
     
 }
