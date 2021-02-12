@@ -18,11 +18,11 @@ namespace PlanPro
         {
             InitializeComponent();
         }
-        private Word.Application wordapp;
-        private Word.Documents worddocuments;
-        private Word.Document worddocument;
+       // private Word.Application wordapp;
+        //private Word.Documents worddocuments;
+        //private Word.Document worddocument;
         // private Word.Paragraphs wordparagraphs;
-        private Word.Paragraph wordparagraph;
+        //private Word.Paragraph wordparagraph;
         // кнопка УМР
         private void button1_Click(object sender, EventArgs e)
         {
@@ -67,37 +67,37 @@ namespace PlanPro
 
 
         //Импорт отчёта в MS Word
-        private void экспертВMSWordToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (dataGridView1.RowCount != 0)
-            {
-                Double kk1 = GetKK(date_start, date_end, 1);
-                //MessageBox.Show(kk1.ToString());
-                Double kk2 = GetKK(date_start, date_end, 2);
-                //MessageBox.Show(kk2.ToString());
-                Double kk = (kk1 + kk2) / 2;
-                //Импорт отчёта
-                using (DocX document = DocX.Load(@"reports\templates\itogs_kkmp.docx"))
-                {
-                    try
-                    {
-                        document.Bookmarks["name_org"].SetText(SettingOrg.getParamOrg(1));
-                        document.Bookmarks["period"].SetText(period);
-                        document.Bookmarks["kk"].SetText(kk.ToString());
-                        document.Bookmarks["kk1"].SetText(kk1.ToString());
-                        document.Bookmarks["kk2"].SetText(kk2.ToString());
+       // private void экспертВMSWordToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+           // if (dataGridView1.RowCount != 0)
+           // {
+              //  Double kk1 = GetKK(date_start, date_end, 1);
+               // //MessageBox.Show(kk1.ToString());
+              //  Double kk2 = GetKK(date_start, date_end, 2);
+              //  //MessageBox.Show(kk2.ToString());
+              //  Double kk = (kk1 + kk2) / 2;
+              //  //Импорт отчёта
+               // using (DocX document = DocX.Load(@"reports\templates\itogs_kkmp.docx"))
+               // {
+                 //   try
+                 //   {
+                  //      document.Bookmarks["name_org"].SetText(SettingOrg.getParamOrg(1));
+                 //       document.Bookmarks["period"].SetText(period);
+                 //       document.Bookmarks["kk"].SetText(kk.ToString());
+                  //      document.Bookmarks["kk1"].SetText(kk1.ToString());
+                   //     document.Bookmarks["kk2"].SetText(kk2.ToString());
 
-                    }
-                    catch
-                    {
+                  //  }
+                  //  catch
+                  //  {
 
-                    }
+                  //  }
 
 
 
-                }
-            }
-        }
+               // }
+          //  }
+      //  }
     }
 
 }
